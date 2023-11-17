@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Log In and Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="Signup()">Sign Up</button>
+            </div>
+            <div class="social-icons">
+                <img src="data:image/png;base64,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" alt="">
+                <img src="https://img.freepik.com/premium-vector/modern-badge-logo-instagram-icon_578229-124.jpg" alt="">
+                <img src="data:image/png;base64,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" alt="">
+            </div>
+            <form action="" class="input-group" id="Login">
+                <input type="text" class="input-field" placeholder="Username" required>
+                <input type="text" class="input-field" placeholder="Enter Your Password" required>
+                <input type="checkbox" class="checkbox"><span>Remember Me</span>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form action="" class="input-group" id="Signup">
+                <input type="text" class="input-field" placeholder="Username" required>
+                <input type="email" class="input-field" placeholder="Email">
+                <input type="text" class="input-field" placeholder="Enter Your Password" required>
+                <input type="checkbox" class="checkbox"><span>Agree To Terms and Conditions</span>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("Login");
+        var y = document.getElementById("Signup");
+        var z = document.getElementById("btn");
+
+        function Signup(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function Login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+
+    </script>
+</body>
+</html>

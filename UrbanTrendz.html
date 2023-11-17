@@ -35,6 +35,7 @@
                 <li><a href="#service">SERVICES</a></li>
                 <li><a href="#testimonial">TESTIMONIALS</a></li>
                 <li><a href="#footer">MEET US</a></li>
+                <li><a href="LogIn.html">Log In/Sign Up</a></li>
             </ul>
         </nav>
     </div>
@@ -198,6 +199,42 @@
     </div>
 
 
+   </section>
+   
+
+   <section id="login/signup">
+     <div class="wrapper">
+    <form action="" id="form" onsubmit="validateForm()">
+      <h6>Login</h6>
+      <div class="input-box">
+        <input type="text" placeholder="Username" id="username">
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" id="password">
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="input-box">
+        <input type="date"  class="date" id="dob" >
+        <div class="error"></div>
+      </div>
+      <div class="input-box">
+        <input type="date" name="" id="" class="date-2">
+      </div>
+      <div class="remember-forgot">
+        <label for=""><input type="checkbox">Remember me</label>
+        <a href="#">Forgot password</a>
+      </div>
+
+      <!-- <button type="button" class="btn">Login</button> -->
+      <input type="submit" value="login" class="btn">
+      
+      <div class="regiter-link">
+        <label for="">Do not have an account? <a href="#">Register</a></label>
+      </div>
+    </form>
+    
+  </div>
    </section>
     <script>
         var menuBtn = document.getElementById("menuBtn")
