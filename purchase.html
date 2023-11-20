@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="STYLED.css"> 
+<style>
+        
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 900;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to show the popup
+            function showPopup() {
+                document.getElementById("popup").style.display = "block";
+                document.getElementById("overlay").style.display = "block";
+            }
+
+            // Function to hide the popup
+            function hidePopup() {
+                document.getElementById("popup").style.display = "none";
+                document.getElementById("overlay").style.display = "none";
+            }
+
+            // Show the popup when the page loads
+            showPopup();
+
+            // Close the popup when the overlay is clicked
+            document.getElementById("overlay").addEventListener("click", hidePopup);
+
+            // Close the popup when the close button is clicked
+            document.getElementById("closeBtn").addEventListener("click", hidePopup);
+        });
+    </script>
+</head>
+<body>
+
+<div id="popup">
+    <p>Get 20% off on your first purchase!</p>
+    <button id="closeBtn">Close</button>
+</div>
+
+<div id="overlay"></div>
+
+<div class="container">
+    <div class="product">
+      <img src="https://images.hola.com/us/images/027c-16d35d88a881-224232914c88-1000/vertical-480/drake-39-s-diamond-necklace.jpg" alt="Diamond Necklace">
+      <h2>Exquisite Diamond Necklace</h2>
+      <p class="price">$9999.99</p>
+    </div>
+
+  <div class="quantity">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </div>
+
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUuYD2vJdsqjX03mZyVmBjICHSLU6P4sSL9Q&usqp=CAU.jpg" alt="Diamond Earrings">
+      <h2>Luxurious Diamond Earrings</h2>
+      <p class="price">$4999.99</p>
+    </div>
+
+  <div class="quantity">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </div>
+
+    <div class="product">
+      <img src="https://www.hanikenjewelry.com/cdn/shop/products/SKU125219A_300x300.jpg?v=1619474071.jpg" alt="Sapphire Bracelet">
+      <h2>Royal Sapphire Bracelet</h2>
+      <p class="price">$7999.99</p>
+    </div>
+
+  <div class="quantity">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </div>
+
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvjit9qA9kr9vtd_hhKhnc3QkK4RBi2Ux5YA&usqp=CAU.jpg" alt="Antique crown">
+      <h2>Antique Diamond crown</h2>
+      <p class="price">$14999.99</p>
+    </div>
+
+  <div class="quantity">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </div>
+
+    <div class="product">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQIt6Ug5K7Zpi4bLeBsDNQ8yWx2aXb_XBHFg&usqp=CAU.jpg" alt="Platinum Ring">
+      <h2>Platinum Art Deco Ring</h2>
+      <p class="price">$11999.99</p>
+    </div>
+
+    <div class="quantity">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </div>
+
+    <button onclick="purchase()">Purchase Now</button>
+  </div>
+
+  <script src="purchase.js"></script>
+
+
+</body>
+</html>
